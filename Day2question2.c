@@ -1,33 +1,21 @@
-//Q2: Write a program to input two numbers and display their sum, difference, product, and quotient.
+//Q4: Write a program to calculate the area and circumference of a circle given its radius.
 #include <stdio.h>
 
+// Defining PI with 5 decimal places to match test case precision
+#define PI 3.14159
+
 int main() {
-    double num1, num2;
-    double sum, difference, product;
+    float radius, area, circumference;
 
-    // Input two numbers from the user
-    printf("Enter first number: ");
-    scanf("%lf", &num1);
-    
-    printf("Enter second number: ");
-    scanf("%lf", &num2);
+    // Reading the radius from the user
+    if (scanf("%f", &radius) == 1) {
+        
+        // Mathematical formulas for calculations
+        area = PI * radius * radius;
+        circumference = 2 * PI * radius;
 
-    // Perform standard calculations
-    sum = num1 + num2;
-    difference = num1 - num2;
-    product = num1 * num2;
-
-    // Display basic results
-    printf("\nSum: %.2lf\n", sum);
-    printf("Difference: %.2lf\n", difference);
-    printf("Product: %.2lf\n", product);
-
-    // Check for division by zero before calculating quotient
-    if (num2 != 0.0) {
-        double quotient = num1 / num2;
-        printf("Quotient: %.2lf\n", quotient);
-    } else {
-        printf("Quotient: Undefined (Cannot divide by zero)\n");
+        // Displaying results formatted to 2 decimal places
+        printf("Area=%.2f, Circumference=%.2f\n", area, circumference);
     }
 
     return 0;
