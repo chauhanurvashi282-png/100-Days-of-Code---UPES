@@ -4,13 +4,13 @@
 int main() {
     float cp, sp, profit, loss, percentage;
 
-    // Input Cost Price and Selling Price
+    
     printf("Enter Cost Price (CP): ");
     scanf("%f", &cp);
     printf("Enter Selling Price (SP): ");
     scanf("%f", &sp);
 
-    // Calculate profit or loss
+    
     if (sp > cp) {
         profit = sp - cp;
         percentage = (profit / cp) * 100;
