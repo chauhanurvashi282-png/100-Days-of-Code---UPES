@@ -4,11 +4,11 @@
 int main() {
     int day;
 
-    // Prompt user for input
+    
     printf("Enter a number (1-7): ");
     scanf("%d", &day);
 
-    // Determine the day of the week using switch-case
+    
     switch(day) {
         case 1:
             printf("Monday\n");
